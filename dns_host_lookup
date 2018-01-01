@@ -1,0 +1,4 @@
+#! /bin/bash
+for name in $(cat namelist.txt);do
+  host $name.website.com|grep "has address" |cut -d" " -f1,4
+done
